@@ -1,26 +1,156 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Jake's Bot Studio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #0d1117;
-        color: #c9d1d9;
-        text-align: center;
-        padding-top: 100px;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jake's Bot Studio</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --text: #c9d1d9;
+      --accent: #58a6ff;
+      --accent2: #1f6feb;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #8b949e;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid #30363d;
+      border-radius: 15px;
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #8b949e;
+      margin-bottom: 10px;
+    }
+    .card a {
+      color: var(--accent2);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #30363d;
+      color: #8b949e;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .socials a:hover {
+      color: var(--accent2);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
       }
-      h1 { color: #58a6ff; }
-      a {
-        color: #58a6ff;
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Welcome to Jake's Bot Studio</h1>
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jake’s Bot Studio</h1>
     <p>Discord bot developer • Automation • AI integrations</p>
-    <p>Find me on <a href="https://github.com/jake074925">GitHub</a> or Discord</p>
-  </body>
+  </header>
+
+  <section id="about">
+    <h2>👋 About Me</h2>
+    <p>
+      I build smart, modern Discord bots using Python.  
+      I love automating communities, moderating servers, and creating AI interactions.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>🤖 My Bots</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>ByteBot</h3>
+        <p>Multi-purpose Discord bot with moderation, leveling, and more features.</p>
+        <a href="#">Invite</a> · <a href="#">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>AutoModX</h3>
+        <p>AI-powered automoderation bot that learns server behavior and improves over time.</p>
+        <a href="#">Invite</a> · <a href="#">Docs</a>
+      </div>
+      <div class="card">
+        <h3>CommandCore</h3>
+        <p>Developer toolkit bot for command testing, debugging, and logging.</p>
+        <a href="#">Invite</a> · <a href="#">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>📬 Contact Me</h2>
+    <p>
+      Want to collaborate or get a custom bot built?  
+      Reach out anytime!
+    </p>
+    <div class="socials">
+      <a href="https://github.com/jake074925" target="_blank">GitHub</a> |
+      <a href="https://fiverr.com" target="_blank">Fiverr</a> |
+      <a href="#">Discord: Jake074925</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jake’s Bot Studio • Built with ❤️ on GitHub Pages</p>
+  </footer>
+
+</body>
 </html>
